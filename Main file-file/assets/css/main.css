@@ -6627,6 +6627,10 @@ input.main-search-input::placeholder {
 .service-box-items:hover .icon::before {
   filter: grayscale(100%) brightness(300%);
 }
+.service-box-items:hover .content h4,
+.service-box-items:hover .content h4 a {
+  color: var(--white);
+}
 .service-box-items:hover .content h4 a {
   color: var(--white);
 }
@@ -6647,6 +6651,10 @@ input.main-search-input::placeholder {
 }
 .service-box-items.active .icon::before {
   filter: grayscale(100%) brightness(300%);
+}
+.service-box-items.active .content h4,
+.service-box-items.active .content h4 a {
+  color: var(--white);
 }
 .service-box-items.active .content h4 a {
   color: var(--white);

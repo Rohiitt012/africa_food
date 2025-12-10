@@ -5171,16 +5171,33 @@ span {
 .news-section-3 {
   margin-bottom: -50px;
 }
+.news-section-3 .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+.news-section-3 .swiper-slide {
+  height: auto;
+  display: flex;
+}
+.news-section-3 .swiper-slide .news-card-items {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 .news-card-items {
   margin-top: 30px;
 }
 .news-card-items .news-image {
   position: relative;
+  width: 370px;
+  height: 240px;
+  overflow: hidden;
 }
 .news-card-items .news-image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .news-card-items .news-image .post-date {
   padding: 12px 24px;
@@ -5239,6 +5256,10 @@ span {
 }
 .news-card-items.style-2 .news-image {
   position: relative;
+  flex-shrink: 0;
+  width: 370px;
+  height: 240px;
+  overflow: hidden;
 }
 .news-card-items.style-2 .news-image .post-date {
   position: absolute;
@@ -5248,6 +5269,9 @@ span {
 }
 .news-card-items.style-2 .news-content {
   margin: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 .news-card-items.style-2 .news-content ul li {
   font-size: 16px;
@@ -6627,10 +6651,6 @@ input.main-search-input::placeholder {
 .service-box-items:hover .icon::before {
   filter: grayscale(100%) brightness(300%);
 }
-.service-box-items:hover .content h4,
-.service-box-items:hover .content h4 a {
-  color: var(--white);
-}
 .service-box-items:hover .content h4 a {
   color: var(--white);
 }
@@ -6651,10 +6671,6 @@ input.main-search-input::placeholder {
 }
 .service-box-items.active .icon::before {
   filter: grayscale(100%) brightness(300%);
-}
-.service-box-items.active .content h4,
-.service-box-items.active .content h4 a {
-  color: var(--white);
 }
 .service-box-items.active .content h4 a {
   color: var(--white);
@@ -7799,6 +7815,19 @@ input.main-search-input::placeholder {
 .testimonial-box-items .client-items .client-content .star .color-text {
   color: var(--text);
   opacity: 0.4;
+}
+
+/* Ensure testimonial cards match height */
+.testimonial-slider-2 .swiper-wrapper {
+  align-items: stretch;
+}
+.testimonial-slider-2 .swiper-slide {
+  height: auto;
+}
+.testimonial-slider-2 .testimonial-box-items {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .tesimonial-section-3 {
